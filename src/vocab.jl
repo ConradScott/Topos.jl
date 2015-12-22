@@ -1,4 +1,4 @@
-// Copyright 2015 Conrad Scott
+# Copyright 2015 Conrad Scott
 
 function readVocab(filename :: AbstractString)
   df = readtable( filename,

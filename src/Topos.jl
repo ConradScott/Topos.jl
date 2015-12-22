@@ -1,4 +1,4 @@
-// Copyright 2015 Conrad Scott
+# Copyright 2015 Conrad Scott
 
 module Topos
 

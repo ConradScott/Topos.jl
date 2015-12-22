@@ -1,4 +1,4 @@
-// Copyright 2015 Conrad Scott
+# Copyright 2015 Conrad Scott
 
 immutable Corpus{S <: AbstractString, D <: AbstractVector, I <: Integer, C <: AbstractMatrix}
     v :: Dictionary{S, D}
