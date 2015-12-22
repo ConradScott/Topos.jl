@@ -1,3 +1,5 @@
+// Copyright 2015 Conrad Scott
+
 import Base.length
 
 immutable Dictionary{S <: AbstractString, D <: AbstractVector}

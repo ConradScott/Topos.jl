@@ -1,3 +1,5 @@
+// Copyright 2015 Conrad Scott
+
 function readUCIBagOfWords(filename :: AbstractString, vocab :: Dictionary)
   header = readtable( filename,
                       header = false, separator = ' ',
