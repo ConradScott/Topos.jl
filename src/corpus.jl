@@ -14,3 +14,11 @@ end
 function Corpus(v :: Dictionary, c :: AbstractMatrix)
   Corpus{eltype(v.d), typeof(v.d), eltype(c), typeof(c)}(v, c)
 end
+
+function words(c :: Corpus)
+  size(c.c, 2)
+end
+
+function documents(c :: Corpus)
+  size(c.c, 1)
+end

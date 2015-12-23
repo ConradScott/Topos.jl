@@ -17,3 +17,7 @@ end
 function length(d :: Dictionary)
   length(d.d)
 end
+
+function words(d :: Dictionary)
+  length(d)
+end
