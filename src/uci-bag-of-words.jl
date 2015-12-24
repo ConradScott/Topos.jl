@@ -76,5 +76,5 @@ function readUCIBagOfWords(filename :: AbstractString, vocab :: Dictionary)
     error("The word ids should be in the provided dictionary; \"$filename\" contains a word id of $(maximum(body[:WordId])) but the dictionary only has $(length(vocab)) words")
   end
 
-  return Corpus(vocab, sparse(body[:DocId], body[:WordId], body[:Count], documents, words))
+  return Corpus(vocab, sparse(body[:WordId], body[:DocId], body[:Count], words, documents))
 end

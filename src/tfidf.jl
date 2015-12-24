@@ -1,19 +1,19 @@
-# Given a corpus, return a document-term matrix of tf-idf values.
+# Given a corpus, return a term-document matrix of tf-idf values.
 function tfidf(c :: Corpus)
   # D = The number of documents.
   D = documents(c)
 
-  # tf(d, w) = The number of occurrences of term w in document d.
+  # tf(w, d) = The number of occurrences of term w in document d.
   tf = c.c
 
   # df(w) = number of documents in which term w occurs
-  df = sum(tf .≠ 0, 1)[:]
+  df = sum(tf .≠ 0, 2)[:]
 
   # idf(w) = inverse document frequency of term w
   idf = log(D) .- log(df)
 
-  # tfidf(d, w) = tf(d, w) * idf(w)
-  tfidf = (tf' .* idf)'
+  # tfidf(w, d) = tf(w, d) * idf(w)
+  tfidf = tf .* idf
 
   return tfidf
 end
